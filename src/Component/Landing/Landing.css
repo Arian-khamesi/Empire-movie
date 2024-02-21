@@ -1,0 +1,22 @@
+.landing-container{
+    position: absolute;
+    top: 64.5%;
+    color: var(--primary-color);
+    background-image: linear-gradient(360deg, black, transparent) !important;
+    width: 100%;
+    height: 300px;
+    padding: 150px 120px 20px;
+}
+.landimg-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.landimg-text-h1{
+    font-size: 38px;
+}
+.landimg-text-span{
+font-size: 20px;
+}
