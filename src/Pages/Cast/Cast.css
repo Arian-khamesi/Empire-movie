@@ -1,33 +1,37 @@
-.movie-info-container {
+.cast-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("./../../../public/images/land-of-bad.png");
+    /* background-image: url("./../../../public/images/land-of-bad.png");
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    height: 775px;
+    background-repeat: no-repeat; */
+    height: 1100px;
 }
 .gray{
     width: 100%;
-    height: 775px;
+    height: 1100px;
     position: absolute;
-    background-color: rgba(20, 20, 20, 0.91);
+    background-color: rgb(20, 20, 20);
 }
 
-.movie-info {
-    margin-bottom: 200px;
+.cast {
+    /* margin-bottom: 200px; */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99999;
+    z-index: 999;
+    margin-top: 200px;
 }
 
 .cast-left {
     width: 40%;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cast-right {
@@ -36,8 +40,9 @@
 }
 
 .cast-poster {
-    width: 90%;
+    width: 40%;
     border-radius: 15px;
+    border-radius: 100px;
 }
 
 .biography {
@@ -51,4 +56,21 @@
 
 .cast-title{
     color: var(--primary-color);
+}
+
+.cast-movie{
+    /* background-color: var(--dark-color); */
+    width: 85%;
+    height: 255px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 9999;
+    margin: 80px auto;
+    padding-bottom: 50px;
+}
+.zIndex{
+    z-index: 9999;
+    margin-top: 80px;
 }
