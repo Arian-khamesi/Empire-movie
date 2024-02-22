@@ -6,8 +6,8 @@ import Footer from '../../Component/Footer/Footer'
 export default function MovieInfo() {
   return (
     <div className="movie-info-container">
-      <div className="gray"></div>
-      <div><Topbar/></div>
+      <div className="gray-movie-info"></div>
+      <div><Topbar gradiant={true}/></div>
       <div className="movie-info">
         <div className="movie-info-left">
           <img src="/images/land-of-bad.png" alt="" className="movie-info-poster" />

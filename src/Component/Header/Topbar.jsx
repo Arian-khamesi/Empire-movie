@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Topbar.css"
 
-export default function Topbar() {
+export default function Topbar({gradiant}) {
+
   return (
-    <div className="topbar-container col-12">
+    <div className={gradiant?"topbar-container col-12":"topbar-container-normal col-12"}>
       <div className="topbar">
         <div className="topbar-left">
           <div className="logo">

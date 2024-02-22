@@ -6,7 +6,7 @@ export default function Register() {
   return (
     <div className="register-container">
       <div className="gray"></div>
-      <Topbar/>
+      <Topbar gradiant={true}/>
       <div className="register-form">
         <label htmlFor="signIn" className='form-label'>Sign In</label>
         <form action="signIn" className='signin-form'>

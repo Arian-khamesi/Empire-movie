@@ -6,7 +6,7 @@ import "./Header.css"
 export default function Header() {
   return (
     <div className='container-img'>
-    <TopBar/>
+    <TopBar gradiant={true}/>
     <Landing/>
     </div>
   )

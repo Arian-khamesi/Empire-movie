@@ -9,7 +9,7 @@ export default function UserPanel() {
   return (
     <div className="user-panel-container">
       <div className="gray-userpanel"></div>
-      <Topbar />
+      <Topbar gradiant={false}/>
       <div className="account-panel">
         <img src="/images/users/user-1.jpg" alt=""  className='user-Photo'/>
         <div className="user-panel-form">

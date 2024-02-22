@@ -6,6 +6,14 @@
     width: 100%;
     z-index: 99999;
 }
+.topbar-container-normal {
+    height: 80px;
+    padding: 5px;
+    background-color:  rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+}
 
 .topbar {
     width: 100%;

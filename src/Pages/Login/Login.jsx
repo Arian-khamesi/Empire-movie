@@ -6,7 +6,7 @@ export default function Login() {
   return (
     <div className="login-container">
       <div className="gray2"></div>
-      <Topbar/>
+      <Topbar gradiant={true}/>
       <div className="login-form">
       <label htmlFor="signIn" className='form-label'>Log In</label>
         <form action="signIn" className='signin-form'>
