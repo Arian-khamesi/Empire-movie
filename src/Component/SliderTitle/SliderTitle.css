@@ -1,0 +1,30 @@
+.slider-title-container{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 90%;
+}
+
+.slider-title{
+    color: var(--primary-color);
+    margin: 0px !important;
+}
+
+.slider-all{
+    font-size: 20px;
+    background-color: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 80px;
+    border-radius: 15px;
+   
+}
+
+.slider-all:hover{
+    font-size: 20px;
+    background-color: var(--primary-color);
+    color: black;
+}
