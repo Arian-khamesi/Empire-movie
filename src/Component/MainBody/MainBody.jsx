@@ -35,13 +35,13 @@ export default function MainBody() {
                     btn={true}
                 />
                 <div className="slider-form-vert">
-                    <Celebriti />
-                    <Celebriti />
-                    <Celebriti />
-                    <Celebriti />
-                    <Celebriti />
-                    <Celebriti />
-                    <Celebriti />
+                <Link className='router-link' to={"/cast/castName"}><Celebriti /></Link>
+                <Link className='router-link' to={"/cast/castName"}><Celebriti /></Link>
+                <Link className='router-link' to={"/cast/castName"}><Celebriti /></Link>
+                <Link className='router-link' to={"/cast/castName"}><Celebriti /></Link>
+                <Link className='router-link' to={"/cast/castName"}><Celebriti /></Link>
+                <Link className='router-link' to={"/cast/castName"}><Celebriti /></Link>
+                <Link className='router-link' to={"/cast/castName"}><Celebriti /></Link>
                 </div>
             </div>
             <div className="top-footer"></div>

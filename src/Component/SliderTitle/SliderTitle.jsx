@@ -1,9 +1,9 @@
 import React from 'react'
 import "./SliderTitle.css"
 
-export default function SliderTitle({title,btn}) {
+export default function SliderTitle({title,btn,margin}) {
   return (
-    <div className="slider-title-container">
+    <div className={margin?"slider-title-container addMargin":"slider-title-container"}>
         <h2 className='slider-title'>{title}</h2>
        {btn? <button className='slider-all'>See All</button>:null}
     </div>

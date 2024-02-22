@@ -4,6 +4,7 @@ import Login from "./Pages/Login/Login";
 import MovieInfo from "./Pages/MovieInfo/MovieInfo";
 import Register from "./Pages/Register/Register";
 import UserPanel from "./Pages/UserPanel/UserPanel";
+import Cast from "./Pages/Cast/Cast"
 
 const routes=[
     {path:"/",element:<Index/>},
@@ -12,6 +13,7 @@ const routes=[
     {path:"/user-panel",element:<UserPanel/>},
     {path:"/login",element:<Login/>},
     {path:"/register",element:<Register/>},
+    {path:"/cast/:castName",element:<Cast/>},
 ]
 
 export default routes;
