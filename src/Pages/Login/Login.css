@@ -1,0 +1,71 @@
+.login-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("./../../../public/images/empire3.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 775px;
+}
+
+.gray2{
+    width: 100%;
+    height: 775px;
+    position: absolute;
+    background-color: rgba(20, 20, 20, 0.85) ;
+}
+.login-form{
+    width: 40%;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.692);
+    margin-top: 200px;
+    z-index: 99999;
+    box-shadow: 1px 1px 15px  4px rgba(0, 0, 0, 0.61);
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.form-label{
+    color: var(--primary-color);
+    font-size: 38px;
+}
+
+.signin-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 260px;
+}
+.login-input{
+    width: 60%;
+    height: 30px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 15px;
+    padding: 0px 10px;
+    color: black;
+}
+
+.login-user{
+    width: 30%;
+    background-color:rgba(254, 208, 133, 0.514);
+    color: black;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.login-user:hover{
+    background-color:var(--primary-color);
+    color: black;
+}
