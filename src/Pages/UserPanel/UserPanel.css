@@ -1,0 +1,174 @@
+.user-panel-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("./../../../public/images/empire3.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1050px;
+}
+
+.gray-userpanel {
+    width: 100%;
+    height: 1650px;
+    position: absolute;
+    background-color: rgba(19, 19, 19, 0.95);
+    z-index: 99;
+}
+
+.account-panel {
+    width: 70%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.692);
+    margin-top: 200px;
+    z-index: 9999;
+    box-shadow: 1px 1px 15px 4px rgba(0, 0, 0, 0.61);
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-panel-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+}
+
+.form-label {
+    color: var(--primary-color);
+    font-size: 38px;
+}
+
+.account-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 260px;
+}
+
+.user-Photo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.user-panel-input {
+    width: 60%;
+    height: 30px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 15px;
+    padding: 0px 10px;
+    color: black;
+}
+
+.user-panel-user {
+    width: 30%;
+    background-color: rgba(254, 208, 133, 0.514);
+    color: black;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.user-panel-user:hover {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+
+/*///////////////////////////////////////////////*/
+
+
+.playlist {
+    width: 70%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.692);
+    margin-top: 50px;
+    z-index: 99999;
+    box-shadow: 1px 1px 15px 4px rgba(0, 0, 0, 0.61);
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    padding: 30px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+.play-list-form {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    padding: 25px 10px;
+}
+
+.play-list-form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-list-input {
+    width: 90%;
+    height: 30px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 15px;
+    padding: 0px 10px;
+    color: black;
+    margin: 20px auto;
+}
+
+.play-list-user {
+    width: 30%;
+    background-color: rgba(254, 208, 133, 0.514);
+    color: black;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.play-list-user:hover {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+/*///////////////////////////////////////////////////////*/
+
+.space{
+    width: 100%;
+    height: 300px;
+    z-index: 999999;
+}
+.grad2 {
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(180deg, black, transparent) !important;
+}
+
+.grad1 {
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(180deg, transparent, black) !important;
+}
+/*///////////////////////////////////////////////////////////////////*/
+.slider-form-vert{
+    z-index: 99999;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.452);
+    padding: 20px;
+    border-radius: 15px;
+}
