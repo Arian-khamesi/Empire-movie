@@ -8,19 +8,19 @@ export default function Topbar() {
       <div className="topbar">
         <div className="topbar-left">
           <div className="logo">
-            <img src="/images/empire.png" alt="logo" className='logo-img'/>
+            <Link to={"/"}><img src="/images/empire.png" alt="logo" className='logo-img'/></Link>
           </div>
           <div className="topbar-menu">
-            <Link className='topbar-links'>Movies</Link>
-            <Link className='topbar-links'>Series</Link>
-            <Link className='topbar-links'>Pepole</Link>
-            <Link className='topbar-links'>About Us</Link>
+            <Link to={""} className='topbar-links'>Movies</Link>
+            <Link to={""} className='topbar-links'>Series</Link>
+            <Link to={""} className='topbar-links'>Pepole</Link>
+            <Link to={""} className='topbar-links'>About Us</Link>
           </div>
         </div>
         <div className="topbar-right">
           <div className="topbar-btns">
-            <button className='topbar-button'>signUp</button>
-            <button className='topbar-button'>signIn</button>
+            <Link to={"/register"}><button className='topbar-button'>signUp</button></Link>
+            <Link to={"/login"}><button className='topbar-button'>signIn</button></Link>
           </div>
         </div>
       </div>

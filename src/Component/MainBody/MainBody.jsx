@@ -3,6 +3,7 @@ import "./MainBody.css"
 import SliderTitle from '../SliderTitle/SliderTitle'
 import MovieBox from '../SliderBox/MovieBox'
 import Celebriti from '../Celebriti/Celebriti'
+import { Link } from 'react-router-dom'
 
 export default function MainBody() {
     return (
@@ -14,33 +15,33 @@ export default function MainBody() {
                     btn={true}
                 />
                 <div className='slider-form'>
-                    <MovieBox poster={"horiz"} />
-                    <MovieBox poster={"horiz"} />
-                    <MovieBox poster={"horiz"} />
+                    <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"horiz"} /></Link>
+                    <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"horiz"} /></Link>
+                    <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"horiz"} /></Link>
                 </div>
                 <SliderTitle
                     title={"Series"}
                     btn={true}
                 />
                 <div className='slider-form-vert'>
-                    <MovieBox poster={"vert"}/>
-                    <MovieBox poster={"vert"}/>
-                    <MovieBox poster={"vert"}/>
-                    <MovieBox poster={"vert"}/>
-                    <MovieBox poster={"vert"}/>
+                    <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
+                    <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
+                    <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
+                    <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
+                    <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
                 </div>
                 <SliderTitle
                     title={"Actors"}
                     btn={true}
                 />
                 <div className="slider-form-vert">
-                    <Celebriti/>
-                    <Celebriti/>
-                    <Celebriti/>
-                    <Celebriti/>
-                    <Celebriti/>
-                    <Celebriti/>
-                    <Celebriti/>
+                    <Celebriti />
+                    <Celebriti />
+                    <Celebriti />
+                    <Celebriti />
+                    <Celebriti />
+                    <Celebriti />
+                    <Celebriti />
                 </div>
             </div>
             <div className="top-footer"></div>
