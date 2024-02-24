@@ -4,6 +4,7 @@ import Footer from '../Component/Footer/Footer'
 import MainBody from '../Component/MainBody/MainBody'
 
 export default function Index() {
+
   return (
     <div>
     <Header/>
