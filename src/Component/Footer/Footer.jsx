@@ -5,10 +5,8 @@ export default function Footer() {
   return (
     <div className="footer-container">
       <div className="footer container">
-        <i class="fa-brands fa-telegram social-icon"></i>
-        <i class="fa-brands fa-instagram social-icon"></i>
-        <i class="fa-brands fa-twitter social-icon"></i>
-        <i class="fa-brands fa-facebook social-icon"></i>
+      <h2 className='footer-logo'>EMPIRE MOVIE</h2>
+      <span>designed by Aryaun</span>
       </div>
     </div>
   )
