@@ -7,6 +7,7 @@ export default function Header() {
   return (
     <div className='container-img'>
     <TopBar gradiant={true}/>
+    <div className='full'></div>
     <Landing/>
     </div>
   )
