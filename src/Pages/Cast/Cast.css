@@ -38,9 +38,23 @@
     width: 50%;
     margin-left: 10px;
 }
+.castrmation{
+    color: var(--primary-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
+.age-cast{
+    margin-left: 50px;
+}
+
+.role-cast{
+    margin-left: 50px;
+}
 .cast-poster {
     width: 40%;
+    max-height: 400px;
     border-radius: 15px;
     border-radius: 100px;
 }
@@ -60,7 +74,7 @@
 
 .cast-movie{
     /* background-color: var(--dark-color); */
-    width: 85%;
+    width: 85% !important;
     height: 255px;
     border-radius: 20px;
     display: flex;

@@ -1,32 +1,56 @@
-import React from 'react'
+import React, { memo, useEffect, useMemo, useState } from 'react'
 import "./Cast.css"
 import Topbar from "./../../Component/Header/Topbar"
 import Footer from '../../Component/Footer/Footer'
 import MovieBox from '../../Component/SliderBox/MovieBox'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import SliderTitle from '../../Component/SliderTitle/SliderTitle'
+import { actors } from '../../DataBase/data'
+import { movies } from '../../DataBase/data'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
 
 export default function Cast() {
+  const [actorMovie, setActorMovie] = useState([])
+  const { castID } = useParams()
+  const mainActor = actors.find(actor => actor.id == castID)
+ 
+  console.log(mainActor);
+  useEffect(() => {
+     const defaultActor = actors.find(actor => actor.id == castID)
+     console.log(defaultActor);
+    if (defaultActor.movies.length===1){
+      for (let index = 0; index < defaultActor.movies.length; index++) {
+        const findMovie = movies.find(movie => movie.name === mainActor.movies[index])
+        setActorMovie(pre => [...pre, findMovie])
+      }
+    }else{
+      for (let index = 0; index <= defaultActor.movies.length; index++) {
+        const findMovie = movies.find(movie => movie.name === mainActor.movies[index])
+        setActorMovie(pre => [...pre, findMovie])
+      }
+    }
+  }, [])
+  console.log(actorMovie);
   return (
     <div className="cast-container">
       <div className="gray"></div>
       <div><Topbar /></div>
       <div className="cast">
         <div className="cast-left">
-          <img src="/images/brad-pitt.jpg" alt="" className="cast-poster" />
+          <img src={mainActor.img} alt="" className="cast-poster" />
           <div className="cast-score"></div>
         </div>
         <div className="cast-right">
           <div className="castrmation">
-            <span className='birthday-cast'></span>
-            <span className='gender-cast'></span>
-            <span className='role-cast'></span>
+            <span className='birthday-cast'>{mainActor.birth}</span>
+            <span className='age-cast'>Age : {mainActor.age}</span>
+            <span className='role-cast'>Actor</span>
           </div>
           <div className="movie-description">
-            <h1 className='cast-title'>Brad Pitt</h1>
-            <p className='cast-desc'><span className='biography'>Biography :</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis nemo vitae beatae eius magnam minus blanditiis iure obcaecati et dolore! Adipisci qui voluptate corrupti sapiente laborum rerum recusandae quia. Quis.
-              Voluptatibus ipsam, explicabo magni aliquid tempora nostrum molestias ratione corrupti dolorum possimus quidem ipsa facere a quos omnis porro sit suscipit provident aliquam earum? Iure porro illo facilis odio quos!
-              Asperiores eos nemo at beatae quam suscipit, fuga, cum soluta mollitia aut itaque, repudiandae deleniti debitis cumque repellendus doloremque vero quaerat magnam ipsum! Fugit suscipit blanditiis dicta mollitia enim ipsam!</p>
+            <h1 className='cast-title'>{mainActor.name}</h1>
+            <p className='cast-desc'><span className='biography'>Biography :</span>{mainActor.desc}</p>
           </div>
         </div>
       </div>
@@ -36,13 +60,45 @@ export default function Cast() {
           btn={false}
         />
       </div>
-      <div className="cast-movie">
+      <div className="cast-movie container">
+        {
+          actorMovie.length > 3 ? (
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              loop={true}
+
+              className="mySwiper"
+            >
+              {
+                actorMovie.slice(0,actorMovie.length-1).map(movie => (
+                  <SwiperSlide>
+                    <Link className='router-link' to={"/movie-info/movieName"}>
+                      <MovieBox poster={"horiz"} {...movie} />
+                    </Link>
+                  </SwiperSlide>
+                ))
+              }
+            </Swiper>
+          ) : (
+
+            actorMovie.map(movie => (
+              <SwiperSlide>
+                <Link className='router-link' to={"/movie-info/movieName"}>
+                  <MovieBox poster={"horiz"} {...movie} />
+                </Link>
+              </SwiperSlide>
+            ))
+
+          )
+
+        }
+
+        {/* <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
         <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
         <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
         <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
-        <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
-        <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
-        <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
+        <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link> */}
       </div>
     </div>
   )
