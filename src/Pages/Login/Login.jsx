@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Login.css"
 import Topbar from "./../../Component/Header/Topbar"
+import Footer from '../../Component/Footer/Footer'
 
 export default function Login() {
   return (
@@ -15,6 +16,8 @@ export default function Login() {
           <button className="login-user">Log In</button>
         </form>
       </div>
+      <div className="top-footer"></div>
+            <Footer/>
     </div>
   )
 }
