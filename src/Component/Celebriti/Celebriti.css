@@ -18,4 +18,6 @@
 .actor-name{
     font-size: 18px;
     color: var(--primary-color);
+    text-align: center;
+    line-height: 17px;
 }
