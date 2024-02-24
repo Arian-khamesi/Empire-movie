@@ -1,15 +1,16 @@
 .topbar-container {
-    height: 350px;
+    height: 80px;
     padding: 5px;
     background-image: linear-gradient(180deg, black, transparent) !important;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
-    z-index: 99999;
+    z-index: 9999999 !important;
 }
+
 .topbar-container-normal {
     height: 80px;
     padding: 5px;
-    background-color:  rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     width: 100%;
     z-index: 99999;
@@ -54,9 +55,10 @@
     color: var(--dark-color);
     cursor: pointer;
     transition: all 0.5s;
+    text-decoration: none;
 }
 
-button:hover {
+.topbar-button:hover {
     color: var(--primary-color);
 }
 
@@ -86,7 +88,7 @@ button:hover {
     text-decoration: none;
     font-size: 21px;
     transition: all 0.3s;
-   border-bottom: 1px solid transparent;
+    border-bottom: 1px solid transparent;
 }
 
 .topbar-links:hover {
