@@ -3,17 +3,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("./../../../public/images/land-of-bad.png");
+    /* background-image: url("./../../../public/images/land-of-bad.png"); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 775px;
+}
+.topbar-z{
+    z-index: 9999;
 }
 .gray-movie-info{
     width: 100%;
     height: 775px;
     position: absolute;
     background-color: rgba(20, 20, 20, 0.91);
+    z-index: 99;
 }
 
 .movie-info {
@@ -28,16 +32,39 @@
 .movie-info-left {
     width: 40%;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .movie-info-right {
     width: 50%;
     margin-left: 10px;
 }
+.movie-information{
+    width: 40%;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.score-imdb-movie{
+    color: orange;
+    margin-left: 65px;
+}
+/* .time-movie{
+    
+} */
+.date-movie{
+margin-left: 65px;
+}
 
 .movie-info-poster {
-    width: 90%;
+    max-width: 90%;
     border-radius: 15px;
+    max-height: 400px;
 }
 
 .overview {
