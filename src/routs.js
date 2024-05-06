@@ -8,7 +8,8 @@ import Cast from "./Pages/Cast/Cast"
 import ShowAll from "./Pages/ShowAll/ShowAll";
 
 const routes=[
-    {path:"/:userID",element:<Index/>},
+    {path:"/",element:<Index/>},
+    // {path:"/:userID",element:<Index/>},
     {path:"/all-movies",element:<AllMovies/>},
     {path:"/movie-info/:movieType/:movieId",element:<MovieInfo/>},
     {path:"/user-panel",element:<UserPanel/>},

@@ -54,7 +54,7 @@ export default function Cast() {
           </div>
         </div>
       </div>
-      <div className="container zIndex">
+      <div className="container zIndex padding">
         <SliderTitle
           title={"Movies"}
           btn={false}

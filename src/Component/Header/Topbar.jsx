@@ -23,7 +23,7 @@ export default function Topbar({ gradiant }) {
       <div className="topbar">
         <div className="topbar-left">
           <div className="logo">
-            <Link to={`/${localStorage.getItem("logged in")}`}><img src="/images/empire.png" alt="logo" className='logo-img' /></Link>
+            <Link to={`/`}><img src="/images/empire.png" alt="logo" className='logo-img' /></Link>
           </div>
           <div className="topbar-menu">
             <Link to={"/show-all/movies/1"} className='topbar-links'>Movies</Link>
