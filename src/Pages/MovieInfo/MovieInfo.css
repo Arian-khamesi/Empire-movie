@@ -27,9 +27,9 @@
 
 .gray-movie-info {
     width: 100%;
-    height: 775px;
+    height: inherit;
     position: absolute;
-    background-color: rgba(20, 20, 20, 0.91);
+    background-color: rgba(20, 20, 20, 0.84);
     z-index: 99;
 }
 
@@ -85,6 +85,7 @@
 .overview {
     font-size: 22px;
     color: teal;
+    display: block;
 }
 
 .movie-info-desc {
@@ -150,6 +151,7 @@
     .overview {
         font-size: 17px;
         color: teal;
+        display: block;
     }
 
     .movie-info-poster {
@@ -205,11 +207,13 @@
     .overview {
         font-size: 17px;
         color: teal;
+        display: block;
     }
 
     .movie-info-poster {
         width: 300px;
-        max-width: 90%;
+        height: 180px;
+        max-width: 100%;
         border-radius: 15px;
         max-height: 400px;
     }
@@ -242,7 +246,7 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 810px;
+        height: 860px;
     }
     .serie-info-container {
         width: 100%;

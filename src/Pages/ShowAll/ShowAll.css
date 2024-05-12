@@ -124,7 +124,7 @@
         align-items: center;
         z-index: 999;
         margin-top: 250px;
-        column-gap: 60px;
+        column-gap: 40px;
         row-gap: 150px;
     }
 }

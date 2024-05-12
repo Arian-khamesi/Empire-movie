@@ -62,6 +62,7 @@
 .biography {
     font-size: 22px;
     color: teal;
+    display: block;
 }
 .cast-desc{
     color: var(--primary-color);
