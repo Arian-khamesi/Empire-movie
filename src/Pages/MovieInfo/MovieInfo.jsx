@@ -22,7 +22,7 @@ export default function MovieInfo() {
       <div className='topbar-z'><Topbar gradiant={true} /></div>
       <div className="movie-info">
         <div className="movie-info-left">
-          <img src={movieType==="movie"?mainMovie.img:mainSerie.img} alt="" className="movie-info-poster" />
+          <img src={movieType==="movie"?mainMovie.img:mainSerie.img} alt="" className={movieType==="movie"?"movie-info-poster":"serie-info-poster"} />
           {/* <div className="movie-info-score"></div> */}
         </div>
         <div className="movie-info-right">

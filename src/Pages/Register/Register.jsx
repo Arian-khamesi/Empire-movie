@@ -62,7 +62,7 @@ export default function Register() {
       <div className="gray-register"></div>
       <Topbar gradiant={true} />
       <div className="register-form">
-        <label htmlFor="signIn" className='form-label'>Sign In</label>
+        <label htmlFor="signIn" className='form-label'>Sign Up</label>
         <form action="signIn" className='signin-form'>
           <Input className='register-input' type="text" placeholder='Full Name' id="fullname"
             validations={[

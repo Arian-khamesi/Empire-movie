@@ -82,6 +82,12 @@
     max-height: 400px;
 }
 
+.serie-info-poster {
+    max-width: 90%;
+    border-radius: 15px;
+    max-height: 400px;
+}
+
 .overview {
     font-size: 22px;
     color: teal;
@@ -161,6 +167,13 @@
         max-height: 400px;
     }
 
+    .serie-info-poster {
+        width: 300px;
+        max-width: 90%;
+        border-radius: 15px;
+        max-height: 400px;
+    }
+
     .movie-info-left {
         width: 50%;
         margin-right: 10px;
@@ -213,6 +226,13 @@
     .movie-info-poster {
         width: 300px;
         height: 180px;
+        max-width: 100%;
+        border-radius: 15px;
+        max-height: 400px;
+    }
+
+    .serie-info-poster {
+        width: 300px;
         max-width: 100%;
         border-radius: 15px;
         max-height: 400px;

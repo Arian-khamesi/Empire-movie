@@ -9,7 +9,7 @@ export default function Login() {
       <div className="gray2"></div>
       <Topbar gradiant={true}/>
       <div className="login-form">
-      <label htmlFor="signIn" className='form-label'>Log In</label>
+      <label htmlFor="signIn" className='form-label'>Sign In</label>
         <form action="signIn" className='signin-form'>
           <input className='login-input' type="text" placeholder='UserName'/>
           <input className='login-input' type="password" placeholder='Password'/>
