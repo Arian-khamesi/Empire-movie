@@ -10,7 +10,7 @@ export default function MovieBox({ poster, name, score, img,id,series}) {
           <img src={img} alt="" className={poster === "horiz" ? "horiz-img-movie-box" : "vert-img-movie-box"} />
           <div className={poster === "horiz" ? "horiz-movie-score" : "vert-movie-score"}>{score}</div>
         </div>
-        <span className={poster === "horiz" ? "horiz-title-movie-box" : "vert-title-movie-box"}>{name}</span>
+        <span className={"vert-title-movie-box"}>{name}</span>
       </div>
     </Link>
   )

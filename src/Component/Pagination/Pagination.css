@@ -41,4 +41,14 @@
     background-color: var(--primary-color);
 }
 
+@media(max-width:800px){
+    .courses__pagination-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px !important;
+
+    }
+}
+
 /* Finish Courses Pagination Styles */

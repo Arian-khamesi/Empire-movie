@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Cast.css"
 import Topbar from "./../../Component/Header/Topbar"
 import Footer from '../../Component/Footer/Footer'
@@ -11,28 +11,71 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+
 export default function Cast() {
   const [actorMovie, setActorMovie] = useState([])
   const { castID } = useParams()
   const mainActor = actors.find(actor => actor.id == castID)
- 
+
   console.log(mainActor);
   useEffect(() => {
-     const defaultActor = actors.find(actor => actor.id == castID)
-     console.log(defaultActor);
-    if (defaultActor.movies.length===1){
+    const defaultActor = actors.find(actor => actor.id == castID)
+    console.log(defaultActor);
+    if (defaultActor.movies.length === 1) {
       for (let index = 0; index < defaultActor.movies.length; index++) {
         const findMovie = movies.find(movie => movie.name === mainActor.movies[index])
         setActorMovie(pre => [...pre, findMovie])
       }
-    }else{
+    } else {
       for (let index = 0; index <= defaultActor.movies.length; index++) {
         const findMovie = movies.find(movie => movie.name === mainActor.movies[index])
         setActorMovie(pre => [...pre, findMovie])
       }
     }
+    ////////////////////////////////////////////
+    if (widthScreen < 800) {
+      setViewPort(1)
+
+    }
+    if (widthScreen > 800 && widthScreen < 1200) {
+      setViewPort(2)
+      setSwiperSpace(15)
+    }
   }, [])
   console.log(actorMovie);
+
+
+  ////////////////////////////////////////////////////////////////////////////////////
+
+
+  function useWindowDimensions() {
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+    useEffect(() => {
+      function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+      }
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    return windowDimensions;
+  }
+
+  const [widthScreen, setWidthScreen] = useState(useWindowDimensions().width)
+  const [viewPort, setViewPort] = useState(3)
+  const [swiperSpace, setSwiperSpace] = useState(20)
+
+
   return (
     <div className="cast-container">
       <div className="gray"></div>
@@ -64,14 +107,14 @@ export default function Cast() {
         {
           actorMovie.length > 3 ? (
             <Swiper
-              slidesPerView={3}
-              spaceBetween={30}
+              slidesPerView={viewPort}
+              spaceBetween={swiperSpace}
               loop={true}
 
               className="mySwiper"
             >
               {
-                actorMovie.slice(0,actorMovie.length-1).map(movie => (
+                actorMovie.slice(0, actorMovie.length - 1).map(movie => (
                   <SwiperSlide>
                     <Link className='router-link' to={"/movie-info/movieName"}>
                       <MovieBox poster={"horiz"} {...movie} />
@@ -81,15 +124,15 @@ export default function Cast() {
               }
             </Swiper>
           ) : (
+            <div className='effects'>
+              {actorMovie.map(movie => (
 
-            actorMovie.map(movie => (
-              <SwiperSlide>
                 <Link className='router-link' to={"/movie-info/movieName"}>
                   <MovieBox poster={"horiz"} {...movie} />
                 </Link>
-              </SwiperSlide>
-            ))
 
+              ))}
+            </div>
           )
 
         }
@@ -100,6 +143,7 @@ export default function Cast() {
         <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link>
         <Link className='router-link' to={"/movie-info/movieName"}><MovieBox poster={"vert"} /></Link> */}
       </div>
+     <Footer/>
     </div>
   )
 }

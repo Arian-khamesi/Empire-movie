@@ -17,7 +17,7 @@ export default function MovieInfo() {
   const mainSerie = series.find(serie => serie.id == movieId)
 
   return (
-    <div className="movie-info-container" style={movieType==="movie"?{backgroundImage: `url(${mainMovie.img})`}:{backgroundImage: `url(${mainSerie.img})`}}>
+    <div className={movieType==="movie"?"movie-info-container":"serie-info-container"} style={movieType==="movie"?{backgroundImage: `url(${mainMovie.img})`}:{backgroundImage: `url(${mainSerie.img})`}}>
       <div className="gray-movie-info"></div>
       <div className='topbar-z'><Topbar gradiant={true} /></div>
       <div className="movie-info">
@@ -37,6 +37,8 @@ export default function MovieInfo() {
           </div>
         </div>
       </div>
+      <div className="top-footer"></div>
+      <Footer/>
     </div>
   )
 }

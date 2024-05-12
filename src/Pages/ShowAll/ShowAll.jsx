@@ -10,6 +10,15 @@ import Celebriti from '../../Component/Celebriti/Celebriti'
 import Pagination from '../../Component/Pagination/Pagination'
 import Footer from '../../Component/Footer/Footer'
 
+
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+        width,
+        height
+    };
+}
+
 export default function ShowAll() {
 
     const { type } = useParams()
@@ -17,6 +26,8 @@ export default function ShowAll() {
     const [shownMovies, setShownMovies] = useState([])
     const [shownSeries, setShownSeries] = useState([])
     const [shownActors, setShownActors] = useState([])
+
+    
 
     return (
         <div className="all-container">
@@ -39,7 +50,7 @@ export default function ShowAll() {
                         itemCount={6}
                         pathName={`/show-all/${type}`}
                         setShownCourses={setShownMovies}
-                        className="mb-5" />
+                        className="mb-5 paginate" />
                 </div>
 
 
@@ -76,7 +87,7 @@ export default function ShowAll() {
                         </div>
                         <Pagination
                             item={actors}
-                            itemCount={6}
+                            itemCount={8}
                             pathName={`/show-all/${type}`}
                             setShownCourses={setShownActors} />
                     </div>

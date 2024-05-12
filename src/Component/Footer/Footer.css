@@ -24,3 +24,48 @@
 .footer-logo{
     margin-bottom: 0px;
 }
+
+
+@media(max-width:1250px){
+    
+.footer{
+    margin: 10px;
+    width: 50%;
+    height: 50px;
+    background-color: transparent;
+    border: 3px solid rgba(254, 208, 133, 0.452);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 5px 80px;
+}
+}
+@media(max-width:800px){
+    
+.footer{
+    margin: 10px;
+    width: 70%;
+    height: 50px;
+    background-color: transparent;
+    border: 3px solid rgba(254, 208, 133, 0.452);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 5px 30px;
+    font-size: 15px;
+}
+}
+@media(max-width:600px){
+    
+.footer{
+    font-size: 12px;
+}
+.footer-logo{
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+}
