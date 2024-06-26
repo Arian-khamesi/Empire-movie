@@ -82,7 +82,7 @@
     justify-content: space-evenly;
     align-items: center;
     z-index: 9999;
-    margin: 80px auto;
+    margin: 20px auto 0px;
     padding-bottom: 50px;
 }
 .zIndex{
